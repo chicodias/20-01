@@ -19,12 +19,21 @@ esses dados.
 gráfico de setores para esses dados.
 
 ```{r}
-a <- read.delim("dados1.txt")
-a.freq <- table(a)
-hist(a.freq)
-cbind(a.freq)
+a <- read.delim("dados1.txt") #lendo os dados
+a.freq <- table(a) #tabulando as frequencias
 
-pie(a.freq, labels = lbls, main="Pie Chart of Countries")
+cbind(a.freq) #imprime a tabela
+
+lbls <- unique(a)
+pie(a.freq, labels = lbls, main="Nível de Satisfação") #grafico de setores
+
+```
+```{r}
+pct <- round(a.freq/sum(a.freq)*100)
+a.freq <- paste(a.freq, pct) # add percents to labels
+lbls <- paste(lbls,"%",sep="") # ad % to labels
+pie(a.freq,labels = lbls, col=rainbow(length(lbls)),
+   main="Pie Chart of Countries")
 ```
 
 ## Including Plots
