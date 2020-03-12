@@ -9,14 +9,22 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+##Exercicio 1
+O gerente de vendas de uma concessionária de automóveis Chrysler enviou uma pesquisa a proprietários desses carros, selecionados aleatoriamente, para avaliar a satisfação do cliente. Uma das perguntas era “Qual a chance de você comprar outro carro da mesma marca e modelo?" Os participantes da pesquisa podiam responder Muito Provável (MP), Provável (P), Neutro (N), Im-
+provável (I) ou Muito Improvável (MI). Os resultados estão disponíveis no arquivo 2019-sme0803-lista2dadosK2.14.R.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+(a) Construa uma distribuição de frequência para
+esses dados.
+(b) Use a tabela da parte (a) para construir um
+gráfico de setores para esses dados.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+```{r}
+a <- read.delim("dados1.txt")
+a.freq <- table(a)
+hist(a.freq)
+cbind(a.freq)
 
-```{r cars}
-summary(cars)
+pie(a.freq, labels = lbls, main="Pie Chart of Countries")
 ```
 
 ## Including Plots
