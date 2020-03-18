@@ -2,21 +2,21 @@
 
 ## Matérias do Semestre
 
-    SME0825 - METODOLOGIA CIENTIFICA I (SEG 21H)
-    SME0890 - DIRECIONAMENTO ACADEMICO (TER 18H)
-    SMA0805 - TOPICOS DE MATEMATICA (TER 19H - QUI 21H)
-    SME0803 - VISUALIZAÇÃO E EXPLORAÇÃO DE DADOS (QUA 21H - SEX 19H)
+    SME0825 - METODOLOGIA CIENTIFICA I (SEG 21H) 
+    SME0890 - DIRECIONAMENTO ACADEMICO (TER 18H) <e-disciplinas>
+    SMA0805 - TOPICOS DE MATEMATICA (TER 19H - QUI 21H) <https://www.larpeculiares.com/copy-of-calculo-i-sma0801-1>
+    SME0803 - VISUALIZAÇÃO E EXPLORAÇÃO DE DADOS (QUA 21H - SEX 19H) <http://www.jucobre.com/paginas/sme0803-visualizacao-e-exploracao-de-dados>
 
 ### 03/03 - SME0803
 
-    Tipos de variaveis
-    ALgarismos Significativos
+    Tipos de variáveis
+    Algarismos Significativos
 
 * Lista 1
 
 ### 05/03 - SMA0805
 
-    Conjuntos: Noções Basicas 1
+    Conjuntos: Noções Básicas 1
 
 * Trabalho 1: para 19/03
 
@@ -75,3 +75,7 @@
 ### 17/03 SMA0805
 
     Entrega do trabalho 1
+
+### 18/03 SME0890
+
+    Aula de R no e-disciplinas
