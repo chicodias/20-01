@@ -8,15 +8,15 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+# VISUALIZAÇÃO E EXPLORAÇÃO DE DADOS - LISTA 2
 
-##Exercicio 1
+## Exercicio 1
+
 O gerente de vendas de uma concessionária de automóveis Chrysler enviou uma pesquisa a proprietários desses carros, selecionados aleatoriamente, para avaliar a satisfação do cliente. Uma das perguntas era “Qual a chance de você comprar outro carro da mesma marca e modelo?" Os participantes da pesquisa podiam responder Muito Provável (MP), Provável (P), Neutro (N), Im-
 provável (I) ou Muito Improvável (MI). Os resultados estão disponíveis no arquivo 2019-sme0803-lista2dadosK2.14.R.
 
-(a) Construa uma distribuição de frequência para
-esses dados.
-(b) Use a tabela da parte (a) para construir um
-gráfico de setores para esses dados.
+* (a) Construa uma distribuição de frequência para esses dados.
+* (b) Use a tabela da parte (a) para construir um gráfico de setores para esses dados.
 
 ```{r}
 a <- read.delim("dados1.txt") #lendo os dados
@@ -24,24 +24,104 @@ a.freq <- table(a) #tabulando as frequencias
 
 cbind(a.freq) #imprime a tabela
 
-lbls <- unique(a)
-pie(a.freq, labels = lbls, main="Nível de Satisfação") #grafico de setores
+names(a.freq) <- c("I","MI","MP","N","P") #rotulos
+pct <- round(a.freq/sum(a.freq)*100) #calcula percentuais
+
+pie(a.freq, labels = names(a.freq),  main="Nível de Satisfação")
+
 
 ```
+
+## Exercício 2 
+
+Obteve-se uma amostra aleatória de eleitores em uma eleição para substituir um senados do estado que se apresentava por motivos de saúde. A filiação partidária de cada eleitor é apresentada no arquivo 2019-sme0803-lista2dadosK2.15.R:
+democrata (D), Republicano (R) ou Independente (I).
+
+* (a) Construa uma distribuição de frequência para esses dados.
+* (b) Use a tabela da parte (a) para construir um gráfico de setores para esses dados.
+
 ```{r}
-pct <- round(a.freq/sum(a.freq)*100)
-a.freq <- paste(a.freq, pct) # add percents to labels
-lbls <- paste(lbls,"%",sep="") # ad % to labels
-pie(a.freq,labels = lbls, col=rainbow(length(lbls)),
-   main="Pie Chart of Countries")
+  a <- read.delim("dados2.txt") #lendo os dados
+  a.freq <- table(a) #tabulando
+  names(a.freq) <- c("D","I","R")
+  cbind(a.freq) #imprime a tabela
+
+  pie(a.freq, names(a.freq))
 ```
 
-## Including Plots
+## Exercício 3
 
-You can also embed plots, for example:
+A distribuição de conceitos em uma grande turma de psicologia na Lousiania State University é apresentada no arquivo 2019-sme0803-lista2dadosK2.17.R.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+* (a) Ache a frequência relativa para cada conceito.
+
+* (b) Construa um gráfico de barras, usando a frequência no eixo vertical, e um gráfico de setores a partir da distribuição de frequência.
+
+* (c) Quantos estudantes havia nessa turma de psicologia? Qual proporção de estudantes foi aprovada (ou seja, recebeu D ou mais)?
+
+````{r}
+  a <- c(10, 43, 54, 26, 15)
+  names(a) <- c("A","B","C","D","E")
+  a.freq <- a/sum(a)
+  cbind(a.freq)
+  barplot(a.freq)
+  pie(a.freq,labels = names(a))
+  
+  print(c("Estudantes na turma:",sum(a)))
+  print(c("Estudantes aprovados:",sum(a)-a[length(a)]))
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Exercicio 4
+
+Obteve-se uma amostra aleatória de assinantes antigos de Popular Woodworking e perguntou-se a cada um a marca de serra de mesa que usava. Os resultados são apresentados no arquivo 2019-sme0803-lista2dadosK2.19.R. 
+
+* (a) Construa uma distribuição de frequência para esses dados.
+
+* (b) Esboce cuidadosamente um gráfico de barras, usando a frequência no eixo vertical, e um gráfico de setores para esses dados.
+
+* (c) Qual proporção de pessoas nessa amostra usa uma serra de mesa Craftsman ou Black & Decker?
+
+* (d) Qual proporção de pessoas nessa amostra não usa uma serra de mesa Delta?
+
+
+````{r}
+  a <- read.delim("dados4.txt") #lendo os dados
+  a.freq <- table(a)
+  cbind(a.freq) #tabela de frequencia
+  
+  barplot(a.freq) #grafico de barras
+  pie(a.freq) #grafico de setores
+
+  
+  pct <-round(a.freq/sum(a.freq)*100)  
+  print(c("% Craftsman ou Black & Decker:",pct["Craftsman"] +pct["Black & Decker"]))
+  print(c("% Não usa Delta:", 1 - pct["Delta"]))
+```
+## Exercício 5 
+
+Os cintos de segurança de um automóvel é projetado para evitar que um ocupante entre em contato com o interior do carro e que seja ejetado para fora dele durante um acidente. Os cintos de segurança dianteiros tornaram-se equipamentos obrigatórios em 1964, e os traseiros em 1968. A Administração de Segurança do Tráfego nas Estradas estuda várias características relativas a
+mortes de passageiros de veículos. A tabela, encontrada no arquivo 2019-sme0803-lista2dadosK2.30.xls, mostra as mortes de ocupantes de veículos, com 16 anos de idade ou mais, em acidentes de carro em 2006 por hora do dia e uso do cinto.
+
+* (a) Ache a frequência relativa para a categoria com cinto para cada hora do dia. Construa um gráfico de barras, usando a frequência no eixo vertical (e hora do dia no eixo horizontal).
+
+* (b) Ache a frequência relativa para a categoria sem cinto para cada hora do dia. Construa
+um gráfico de barras, usando a frequência no eixo vertical (e hora do dia no eixo horizontal).
+
+* (c) Como se comparam esses dois gráficos de barras? Descreva quaisquer semelhanças ou diferenças.
+
+## Exercício 6
+
+Gráficos de barras empilhados ou lado a lado podem ser usados para a comparação de dados categóricos obtidos de duas (ou mais) fontes ou grupos diferentes. Os dados, disponíveis no arquivo 2019-sme0803-lista2dadosK2.33.xls, apresentam uma os conceitos de testes em duas seções
+diferentes de alunos de um curso introdutório de estatística. Construa gráficos de barras empilhadas e lado a lado para esses dados.
+
+## Exercício 7 
+
+O número de mulheres na força de trabalho tem crescido continuamente desde 1970. Em 2007, havia aproximadamente 71 milhões de mulheres trabalhadoras com 16 anos de idade ou mais, representando 59% de toda a força de trabalho dos Estados Unidos. A tabela disponível no arquivo  2019-sme0803-lista2dadosK2.34.xls apresenta a frequência relativa de trabalhadores homens e mulheres, por idade, em 2007.
+
+* (a) Construa um gráfico de barras lado a lado, usando a frequência relativa de cada classe.
+
+* (b) Usando esses dados, há alguma maneira de se determinar a frequência relativa de todas as mulheres (ou homens), com 16 anos de idade ou mais, que estavam trabalhando em 2007?  Por que ou por que não?
+
+## Exercício 8
+
+Considere os dados disponíveis no arquivo 2019-sme0803-lista2dadosK2.53.xls. Construa uma distribuição de frequência para resumir esses dados, usando os intervalos de classe 78-80, 80-82, 82-84, . . .
