@@ -1,0 +1,109 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amssymb}
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+%\bibliographystyle{ieeetr}
+\bibliography{topicos1}
+
+%opening
+\title{O paradoxo de Russel e suas contribuções para a Teoria dos Conjuntos}
+\author{Francisco Rosa Dias de Miranda}
+
+\begin{document}
+
+\maketitle
+
+\section{Introdução}
+
+A Teoria dos Conjuntos tornou-se um dos mais importantes campos de estudo ao longo da história. Grandes matemáticos do século XX como Cantor, Hilbert, Von Neumann, Russell, Göedel entre muitos outros contribuíram para içá-la ao posto de teoria fundamentadora da matemática.\cite{rpm04}
+
+Por ser de grande importância ainda nos dias de hoje, até mesmo algumas noções de o que podemos chamar de Teoria "Ingênua" dos Conjuntos\footnote{Diversos autores utilizam essa nomenclatura para referir-se a uma abordagem de Teoria dos Conjuntos que não a livre dos paradoxos descobertos ao longo da história, ocasionados por uma definição mais informal de conjunto.} estão presentes no currículo dos Ensinos Fundamental e Médio. 
+
+Dentre os principais avanços em Teoria dos Conjuntos está o impacto que suas descobertas provocaram na forma em que axiomatizamos a matemática moderna. Contudo, tal axiomatização (ou tentativa de axiomatizá-la) não pode ser por si só livre de contradições e inconsistências. Mas tais descobertas só foram constatadas e provadas ao decorrer desse processo, como veremos neste texto. 
+
+\section{O surgimento da Teoria dos Conjuntos}
+
+O estudo de Teoria dos conjuntos foi iniciado por Georg Cantor em 1878. 
+Este brilhante matemático introduziu o conceito de cardinalidade para conjuntos, que definiremos adiante.
+
+Em matemática, a cardinalidade de um conjunto é uma medida de seu "tamanho". Seja $A$ um conjunto com $n$ elementos. A cardinalidade de $A$, ou simplesmente $\#A = n$.
+
+Para conjuntos infinitos, uma forma de estudar sua cardinalidade é através de bijeções com os números naturais. Dizemos que um conjunto é \emph{enumerável} se é possível estabelecer uma correspondência biunívoca entre este conjunto e o conjunto dos números naturais, e \emph{não-enumerável} quando não é possível estabelecer tal relação.
+
+Através desse argumento, Cantor foi capaz de provar a enumerabilidade do conjunto dos números racionais. E mais, ele também foi capaz de provar a não-enumerabilidade dos reais, estabelecendo assim que até mesmo o intervalo $[0,1]$ contém mais números que todo o conjunto dos naturais ou racionais.\footnote{As demonstrações da enumerabilidade de $\mathbb{Q}$, não-enumerabilidade de $\mathbb{R}$ e da densidade da reta estão disponíveis em \cite{histinfinito}.}
+
+Essa descoberta revelou um fato estarrecedor: existem pelo menos dois tipos diferentes de infinito, o do conjunto dos números naturais e o do conjunto dos números reais.\cite{rpm04} Esse fato ficou conhecido como Hipótese do Continuum.
+
+Logo após a sedimentação proposta por Cantor, Gottlob Frege (1884) fez uma tentativa de formalizar a matemática através de elementos presentes nessa recém-criada Teoria dos Conjuntos. Mas, antes mesmo de publicar o volume final de seu trabalho, Fredge recebeu uma carta de Bertrand Russell (1902), que havia descoberto uma inconsistência estutural no recém-criado sistema.
+
+Tal fato gerou enorme consternação em Frege, conforme pode ser constatado em fragmento de sua resposta a Russell:
+\begin{quote}
+"Sua descoberta da contradição me causou uma enorme surpresa e, eu quase diria, consternação, já que ela abalou as bases nas quais eu pretendia erigir a aritmética. (...) Devo refletir aprofundadamente nesse assunto. Já que é muito grave que não apenas as fundações da minha aritmética, mas também as únicas fundações possíveis da aritmética, parecem se perder."\cite{carta}
+\end{quote}
+
+Adiante, explicaremos como o Paradoxo de Russell mudou completamente a base sobre a qual a Teoria dos Conjuntos erguia-se. Como veremos, tal formulação foi uma principais intuições a contribuir na concepção da matemática na forma em que hoje estudamos.
+
+\section{Paradoxos e possíveis soluções}
+
+Usar conjuntos para formalizar a estrutura da matemática consiste em considerar todos os objetos matemáticos como conjuntos. Tudo é conjunto.\cite{fajardo} Números, funções e relações são conjuntos, assim como os próprios elementos de um conjunto podem ser conjuntos.
+
+Assim, genericamente, dada uma propriedade se forme o conjunto dos objetos que têm essa propriedade. \cite{conjconj}
+
+Frege tentou, com ajuda dessa descrição, propor uma formalização da matemática em que a lógica e os conjuntos eram praticamente indissociáveis, que mais tarde começou a ser chamada de "ingênua", por conta Bertrand Russell ter encontrado inconsistências nessa formalização, através de seu famoso paradoxo:
+
+Seja $X$ um conjunto, com os elementos definidos da seguinte forma:
+
+$$\{{x : x \notin X}\}.$$ Tal definição leva a uma contradição, pois, para cada $x \in X \Leftrightarrow  x \notin X$.
+
+Esses  paradoxos são  gerados  pela  flexibilidade  da própria  linguagem, assim sendo era necessário para a matemática construir um modelo que estabelecesse resultados importantes a partir da teoria sem gerar tais contradições.\cite{histinfinito}
+
+Uma das primeiras tentativas, nesse sentido, foi proposta pelo próprio Russell com a sua Teoria dos Tipos. Outro pioneiro nesse campo foi David Hilbert em 1900, através seu programa de fundamentação da matemática.
+
+Embora as ideias de Cantor sobre a Teoria dos Conjuntos tenham possibilitado uma construção inteiramente nova, ele não conseguiu provar um fato essencial, a já mencionada Hipótese do Continuum, basicamente a pergunta: existe um conjunto de cardinalidade maior que a do conjunto dos números naturais e menor que a dos reais?
+ 
+Hilbert listou a Hipótese do Continuum como o primeiro dentre outros 23 problemas. O segundo deles era formalizar a Matemática, prová-la consistente e livre de contradições.
+
+Formulações axiomáticas da Teoria dos Conjuntos logo precederam Russell e a mais conhecida delas hoje é chamada de ZFC (Zermelo-Fraenkel-Choice), que englobou as contribuições de Ernst Zermelo, Abraham Fraenkel e Thoralf Skolem entre os anos de 1908 e 1930.\cite{zfc}
+
+As classificações de conjuntos informais e irrestritas da Teoria "Ingênua" foram substituídas por axiomas que buscavam acabar com as contradições. Ou seja, dados um conjunto $A$ e uma propriedade $P(x)$, existe um conjunto $M$ cujos elementos são os elementos de $A$ que satisfazem a propriedade $P(x)$.\cite{intro_tese}
+
+Assim, a concepção de um modelo axiomático para a Teoria dos Conjuntos, que superava os paradoxos anteriores (embora não livre de novos), logo possibilitou diversos avanços para a Matemática. Uma das primeiras contribuições realizadas nesse sentido foi dada por Kurt Gödel, que, através de seus Teoremas de Incompletude, atacou os dois problemas de Hilbert já mencionados.
+
+Não traremos os teoremas, mas para falar de suas implicações, uma delas foi de certa forma resolver o primeiro problema de Hilbert, provando que a negação da Hipótese do Contínuo não era provável em ZFC.\footnote{Paul Cohen (1963), através da técnica do \emph{forcing}, criada por ele para resolver proposições indecidíveis, que provou o afirmativo.}
+
+O segundo teorema de Gödel diz, em grossas palavras, que qualquer prova de consistência da aritmética que utilize a própria aritmética para fazê-lo é inconsistente. Logo, é impossível alcançar o objetivo de Hilbert (embora alguns matemáticos acreditem que ele ainda esteja em aberto).
+
+Os teoremas da Incompletude tiveram um grande papel em determinarmos até que grau podemos demonstrar a consistência de um sistema, de forma que é impossível a ZFC demonstrar sua própria consistência. O que podemos fazer é provar que aceitar o axioma da escolha é consistente com ZF (embora não aceitá-lo também o seja).
+
+\section{Conclusão}
+
+Desde Cantor surgiram muitas novas disciplinas matemáticas que se desenvolveram extensamente, como a Topologia, a Análise Real, a Teoria da Medida e Integração, a Teoria da Probabilidade, e outras mais. \cite{rpm04}
+
+Há outros modelos em teorias dos conjuntos além de ZFC, por exemplo a NBG (von Neumann-Bernays-Godel set theory) e a MK (Morse-Kelly set theory), em que a aritmética de Peano também é consistente.
+
+Existe até mesmo um modelo mais geral, a Teoria das Categorias, que generaliza conjuntos, grupos, espaços vetoriais, e até mesmo grafos como um único objeto matemático - as categorias. 
+
+Em todas essas disciplinas a linguagem, a notação e os resultados da Teoria dos Conjuntos se revelaram instrumento natural de trabalho, a ponto de ser impossível conceber o desenvolvimento de toda essa Matemática sem a Teoria dos Conjuntos.
+
+\begin{thebibliography}{topicos1}
+
+\bibitem{rpm04} Geraldo Ávila (2000) Revista do Professor de Matemática, \textit{A teoria dos conjuntos e o ensino de Matemática} \textit {http://rpm.org.br/cdrpm/4/2.htm}
+
+\bibitem{histinfinito} Christiano Otávio de Rezende Sena (2011), \textit{“Uma história sobre o infinito atual”},
+\textit{https://repositorio.ufmg.br/bitstream/1843/BUBD-9ATLBH/1/monografia_christianootavio.pdf}
+
+\bibitem{carta} Carta de Russell a Frege (16 de Junho de 1902). Disponível em http://nulfic.org/traducoes/gottlob-frege/carta-de-russell-a-frege-16-de-junho-de-1902/
+
+\bibitem{fajardo} Rogério Augusto dos Santos Fajardo (2018), \textit{Teoria dos Conjuntos}, \textit{https://www.ime.usp.br/~fajardo/Conjuntos.pdf}
+
+\bibitem{conjconj} Gilda Ferreira (2015) Gazeta de Matematica \textit{O Conjunto de Todos os Conjuntos Nao Existe}, \textit{https://webpages.ciencias.ulisboa.pt/~gmferreira/conjuntos.pdf}
+
+\bibitem{intro_tese} Renan Maneli Mezabarba (2012) \textit{Uma Introdução à Teoria Axiomática dos Conjuntos} \textit{https://fernandobatista89.files.wordpress.com/2013/03/uma-introduc3a7c3a3o-c3a0-teoria-axiomc3a1tica-dos-conjuntos.pdf}
+
+
+\bibitem{zfc} James T. Smith (2008) \textit{ZERMELO–FRAENKEL SET THEORY}, \textit{http://math.sfsu.edu/smith/Math800/Units/Zermelo-FraenkelSetTheory.pdf}
+
+
+\end{thebibliography}
+\end{document}
