@@ -10,6 +10,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 # VISUALIZAÇÃO E EXPLORAÇÃO DE DADOS - LISTA 2
 
+Prof. Juliana Cobre]
+
 Todos os exercícios foram retirados de Stephen Kokoska - Introdução à Estatística - Uma Abordagem por Resolução de Problemas, exceto onde indicado.
 
 ## Exercicio 1
@@ -126,7 +128,8 @@ freqb <- tab$`Sem cinto` / nb
 names(freqb) <- tab$Hora
 barplot(freqb)
 ```
-##### Resp c: Os dados parecer ter distribuição normal, porém seria necessário um teste de aderência (tentar ks.test(dados.ex14_6,y="pnorm",mean=10,sd=5) ) para comprovar essa hipótese. As frequencias tem uma distribuição similar entre si, sendo a média dos acidentes com cinto durante a tarde, enquanto os acidentes sem cinto ocorrem em média durante a madrugada. 
+#### Resp c:
+Os dados parecer ter distribuição normal, porém seria necessário um teste de aderência (tentar ks.test(dados.ex14_6,y="pnorm",mean=10,sd=5) ) para comprovar essa hipótese. As frequencias tem uma distribuição similar entre si, sendo a média dos acidentes com cinto durante a tarde, enquanto os acidentes sem cinto ocorrem em média durante a madrugada. 
 
 ## Exercício 6
 
@@ -158,9 +161,56 @@ O número de mulheres na força de trabalho tem crescido continuamente desde 197
 library(readxl)
 
 tab <-  read_excel("SME0803_dados/2019-sme0803-lista2dadosK2.34.xls")
+nomes <- tab$`Grupo de idade`
+tab <- matrix(c(tab$`Freq. Relativa Homens`,tab$`Freq. Relativa Mulheres`),ncol = 2, nrow = 7)
+rownames(tab) <- nomes
+colnames(tab) <- c("Freq. Relativa Homens", "Freq Relativa Mulheres")
+barplot(t(tab))
+
+barplot(t(tab), beside = TRUE)
+legend("topright",
+       legend = c("Homens","Mulheres"),
+       pch = 15)
+
 
 ```
 
 ## Exercício 8
 
 Considere os dados disponíveis no arquivo 2019-sme0803-lista2dadosK2.53.xls. Construa uma distribuição de frequência para resumir esses dados, usando os intervalos de classe 78-80, 80-82, 82-84, . . .
+
+
+```{r}
+library(readxl)
+
+tab <-  read_excel("SME0803_dados/2019-sme0803-lista2dadosK2.53.xls")
+
+dados <- sort(tab$Dados)
+n = length(dados) 
+A = max(dados) - min(dados) 
+A_c = 2
+
+limites = seq(min(dados),max(dados),A_c)
+
+freq = table(cut(dados, breaks = limites, right = FALSE))
+barplot(freq)
+
+freq_r = freq/n
+barplot(freq_r)
+
+
+```
+
+## Exercicio 13
+
+Há padrões naciinais para cada sinal em estradas, marcação de solo e sinal de traáfego. Embora a lei estadual prevaleça, não há uma política estadual sobre o tempo de duração da luz amarela. Suponha que a duração recomentada em nível federal seja de 3 a 6 segundos, com tempos mais longos em vias com limites mais altos de velocidade. Seliecinou-se uma amostra aleatória de sinais de tráfego em Norman, Oklahoma, e registrou-se o tempo de duração da luz amarela para cada um deles. sme0803-lista2dadosK2.52.xls.
+
+* Contrua um histograma de ramo-e-folhas. Divida cada ramo em cinco partes.
+
+* com base no diagrama da parte a, voce acha que a duração da luz amarela nessa cidade satisfaz a recomendação federal? justifique sua resposta.
+
+```{r}
+tab <-  read_excel("SME0803_dados/2019-sme0803-lista2dadosK2.52.xls")
+stem(tab$Duração, scale = 2)
+
+```
