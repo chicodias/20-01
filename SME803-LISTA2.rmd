@@ -201,6 +201,19 @@ barplot(freq_r)
 
 ```
 
+## Exercicio 9
+
+Histograma de frequencia dos dados da tabela
+
+```{r}
+freq <- c(5,8,10,12,9,8,5,4,3,2)
+limites <- seq(400,500,10)
+classes = levels(cut(freq, breaks = limites, right = FALSE))
+names(freq) <- classes
+
+barplot(freq)
+```
+
 ## Exercicio 13
 
 Há padrões naciinais para cada sinal em estradas, marcação de solo e sinal de traáfego. Embora a lei estadual prevaleça, não há uma política estadual sobre o tempo de duração da luz amarela. Suponha que a duração recomentada em nível federal seja de 3 a 6 segundos, com tempos mais longos em vias com limites mais altos de velocidade. Seliecinou-se uma amostra aleatória de sinais de tráfego em Norman, Oklahoma, e registrou-se o tempo de duração da luz amarela para cada um deles. sme0803-lista2dadosK2.52.xls.
