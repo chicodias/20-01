@@ -97,7 +97,7 @@ Obteve-se uma amostra aleatória de assinantes antigos de Popular Woodworking e 
   
   pct <-round(a.freq/sum(a.freq)*100)  
   print(c("% Craftsman ou Black & Decker:",pct["Craftsman"] +pct["Black & Decker"]))
-  print(c("% Não usa Delta:", 1 - pct["Delta"]))
+  print(c("% Não usa Delta:", (100-pct["Delta"])))
 ```
 ## Exercício 5 
 
@@ -111,10 +111,40 @@ um gráfico de barras, usando a frequência no eixo vertical (e hora do dia no e
 
 * (c) Como se comparam esses dois gráficos de barras? Descreva quaisquer semelhanças ou diferenças.
 
+```{r}
+#install.packages("readxl")
+library(readxl) #pacote para ler arquivos xls.
+tab <-  read_excel("SME0803_dados/2019-sme0803-lista2dadosK2.30.xls")
+
+na <- sum(tab$`Com cinto`)
+freqa <- tab$`Com cinto` / na
+names(freqa) <- tab$Hora
+barplot(freqa)
+
+nb <- sum(tab$`Sem cinto`)
+freqb <- tab$`Sem cinto` / nb
+names(freqb) <- tab$Hora
+barplot(freqb)
+```
+##### Resp c: Os dados parecer ter distribuição normal, porém seria necessário um teste de aderência (tentar ks.test(dados.ex14_6,y="pnorm",mean=10,sd=5) ) para comprovar essa hipótese. As frequencias tem uma distribuição similar entre si, sendo a média dos acidentes com cinto durante a tarde, enquanto os acidentes sem cinto ocorrem em média durante a madrugada. 
+
 ## Exercício 6
 
 Gráficos de barras empilhados ou lado a lado podem ser usados para a comparação de dados categóricos obtidos de duas (ou mais) fontes ou grupos diferentes. Os dados, disponíveis no arquivo 2019-sme0803-lista2dadosK2.33.xls, apresentam uma os conceitos de testes em duas seções
-diferentes de alunos de um curso introdutório de estatística. Construa gráficos de barras empilhadas e lado a lado para esses dados.
+diferentes de alunos de um curbso introdutório de estatística. Construa gráficos de barras empilhadas e lado a lado para esses dados.
+
+```{r}
+library(readxl)
+tab <-  (read_excel("SME0803_dados/2019-sme0803-lista2dadosK2.33.xls"))
+nomes <- tab$Classificação
+tab <- matrix(c(tab$`Freq Homens`,tab$`Freq Mulheres`),ncol = 2, nrow = 5)
+rownames(tab) <- nomes
+colnames(tab) <- c("Freq. Homens", "Freq Mulheres")
+barplot(t(tab))
+
+barplot(t(tab), beside = TRUE)
+
+```
 
 ## Exercício 7 
 
@@ -123,6 +153,13 @@ O número de mulheres na força de trabalho tem crescido continuamente desde 197
 * (a) Construa um gráfico de barras lado a lado, usando a frequência relativa de cada classe.
 
 * (b) Usando esses dados, há alguma maneira de se determinar a frequência relativa de todas as mulheres (ou homens), com 16 anos de idade ou mais, que estavam trabalhando em 2007?  Por que ou por que não?
+
+```{r}
+library(readxl)
+
+tab <-  read_excel("SME0803_dados/2019-sme0803-lista2dadosK2.34.xls")
+
+```
 
 ## Exercício 8
 

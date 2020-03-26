@@ -146,6 +146,7 @@ legend("topleft", col = c("#00BFFF","#F4A460"),
 # escala de cores cinza
 pie(freq_r, col = gray(seq(0.4,1,length = length(freq_r))),
     labels = paste(names(freq_r),round(freq_r,2)))
+
 # barras empilhadas: melhor com o ggplot2
 barplot(as.matrix(freq_r), col = cores, width = 0.5, xlim= c(0,1))
 legend("topright", col = cores,

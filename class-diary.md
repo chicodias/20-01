@@ -79,3 +79,12 @@
 ### 18/03 SME0890
 
     Aula de R no e-disciplinas
+
+### 19/03 SMA0805
+
+    * AR1: para 23/03
+
+### SME0890
+
+    Aulas 1 e 2 disponiveis
+    plantao
