@@ -1,0 +1,26 @@
+---
+title: "SME0803-LISTA2"
+author: "Francisco Miranda"
+date: "12/03/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# VISUALIZAÇÃO E EXPLORAÇÃO DE DADOS - LISTA 3
+
+Prof. Juliana Cobre]
+
+Todos os exercícios foram retirados de Stephen Kokoska - Introdução à Estatística - Uma Abordagem por Resolução de Problemas, exceto onde indicado.
+
+
+## Exercicio 1
+
+Consumo de Combustível e Carros. A qualidade de bateria de um automóvel é, em geral, media em Cold Cranking Amps (CCA), uma medida da corrente a 0F. Trinta baterias de automóveis foram selecionadas e sujeitas a temperaturas congelantes. Os dados de CCA resultantes constam no arquivo 2019-sme0803-lista2dadosK2.63.xls.
+
+* (a) Construa uma distribuição de frequência para resumir esses dados, e faça o histograma correspondente.
+
+* (b) Descreva a forma da distribuição.
+
+* (c) Estime o meio da distribuição, um número M tal que 50% dos dados estão abaixo de M e 50% estão acima de M.

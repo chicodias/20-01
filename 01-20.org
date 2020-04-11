@@ -1,0 +1,34 @@
+* Lista de coisas - ICMC - BECD
+
+** 1 Semestre de 2020
+
+*** SME0825 (segunda)
+
+*** SME0890 (terca)
+
+*** SMA0805 (terca e quinta)
+* DONE AR01
+* TODO Lista 1
+
+*** SME0803 (quarta e sexta)
+* TODO Lista 1
+* TODO Lista 2
+* TODO Pratica 1
+* DONE Pratica 2
+* DONE Pratica 3
+* TODO Pratica 4 (parei no video 3)
+* TODO Pratica 5
+
+
+
+* Things to learn
+
+** Classic Guitar
+*** Songs
+
+*** Exercises
+
+** Eletric Guitar
+*** Songs
+
+*** Exercises
