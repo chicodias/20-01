@@ -13,11 +13,13 @@
 *** SME0803 (quarta e sexta)
 * TODO Lista 1
 * TODO Lista 2
+* TODO Lista 3
 * TODO Pratica 1
 * DONE Pratica 2
 * DONE Pratica 3
-* TODO Pratica 4 (parei no video 3)
+* DONE Pratica 4 
 * TODO Pratica 5
+* TODO Teorica 6
 
 
 

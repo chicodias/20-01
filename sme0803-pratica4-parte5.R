@@ -10,104 +10,159 @@
 dados = read.table("salario.R", header = T)
 
 names(dados)
+View(dados)
 
 # histograma todos 
-
+hist(dados$salario)
 
 # conhecendo a função hist
-hist_dados = 
+hist_dados = hist(dados$salario)
+names(hist_dados)
 
-
+hist_dados$breaks
+hist_dados$counts
 
 # histograma todos barras coloridas
-
+hist(dados$salario, col = "blue")
 
 # nomear os eixos
-
+hist(dados$salario, col = "blue",
+     xlab = "Salário",
+     ylab = "Frequência",
+     main = " ")
 
 # calcular o k pela regra de Sturges
-n = 
+n = length(dados$salario)
+n
 
+
+k_s = 1 + 3.3 * log10(n)
+k_s
+
+
+hist(dados$salario, col = "blue", breaks = round(k_s),
+     xlab = "Salário",
+     ylab = "Frequência",
+     main = " ")
 
 
 # calcular o k pela regra do quadrado
+k_q = sqrt(n)
+k_q
 
+hist(dados$salario, col = "blue", breaks = round(k_q),
+     xlab = "Salário",
+     ylab = "Frequência",
+     main = " ")
 
 
 
 # vários gráficos na mesma figura
 par(mfrow =c(2,2))
-hist(dados$salario, col = "blue", breaks = ,
+hist(dados$salario, col = "blue", breaks = 3,
      xlab= "Salário",
      ylab = "Frequência",
-     main = " ")
-hist(dados$salario, col = "blue", breaks = ,
+     main = "k = 3")
+hist(dados$salario, col = "blue", breaks = round(k_s),
      xlab= "Salário",
      ylab = "Frequência",
-     main = " ")
-hist(dados$salario, col = "blue", breaks = ,
+     main = "k de Sturges")
+hist(dados$salario, col = "blue", breaks = round(k_q),
      xlab= "Salário",
      ylab = "Frequência",
-     main = " ")
-hist(dados$salario, col = "blue", breaks = ,
+     main = "k regra do quadrado")
+hist(dados$salario, col = "blue", breaks = 30,
      xlab= "Salário",
      ylab = "Frequência",
-     main = " ")
+     main = "k = 30")
 
 
-# Nota: o R usa como default ????
-# mas aproxima pela ????
+# Nota: o R usa como default a regra de sturges
+# mas aproxima pela parte inteira do k aprox
 # Exercício: troque a função round(k_s) por outra
 # que faça o que o default do R considera.
 
-# considerar k = 
-hist(dados$salario, col = "blue", breaks = ,
+par(mfrow =c(1,1))
+# considerar k = 9
+hist(dados$salario, col = "blue", breaks = 9,
      xlab= "Salário",
      ylab = "Frequência",
      main = " ")
 
-# Conclusão: 
+# Conclusão: nem sempre o item breaks funciona.
 
 # acrescentar a densidade aproximada
 hist(dados$salario, col = "blue",
-
+     freq = F,
      xlab= "Salário",
      ylab = "Frequência",
      main = " ")
 
+lines(density(dados$salario), lty = 2)
 
 # acrescentar os valores observados
 rug(dados$salario)
 
 # separar histograma por sexo
-hist(          , col = " ",
+hist(dados$salario[dados$sexo == "F"], col = "orange",
      freq = T, 
      xlab= "Salário",
      ylab = "Frequência",
      main = " ")
-hist(         , col = " ",
+hist(dados$salario[dados$sexo == "M"], col = "light blue",
      freq = T, 
      xlab= "Salário",
      ylab = "Frequência",
-     main = " ", )
+     main = " ", add = T)
 
 # precisamos aumentar o eixo x
 min(dados$salario)
 max(dados$salario)
 
+#acrescentando as linhas de densidades aproximadas
 
-# acrescentando as linhas de densidades aproximadas
+hist(dados$salario[dados$sexo == "F"], col = "orange",
+     freq = F, 
+     xlab= "Salário",
+     ylab = "Frequência",
+     main = " ", xlim = c(30,70), ylim = c(0,0.15))
+lines(density(dados$salario[dados$sexo == "F"]), lty = 2, col = "red")
 
-
+hist(dados$salario[dados$sexo == "M"], col = "light blue",
+     freq = F, 
+     xlab= "Salário",
+     ylab = "Frequência",
+     main = " ", add = T)
+lines(density(dados$salario[dados$sexo == "M"]), lty = 2, col = "blue")
 
 ### Histograma e polígono de frequências
+
+hist_dados = hist(dados$salario, breaks = "Sturges",
+                  xlab = "Salários",
+                  ylab = "Frequencia",
+                  main = " ")
+lines(hist_dados$mids, hist_dados$counts, col = "blue")
+
 par(mfrow = c(1,1))
 
 # um pouco de supérfulo
-
+hist_dados = hist(dados$salario, breaks = "Sturges",
+                  col = "lightgrey",
+                  border = "#A9A9A9",
+                  las = 1,
+                  xlab = "Salários",
+                  ylab = "Frequencia",
+                  main = " ")
+lines(hist_dados$mids, hist_dados$counts, col = "blue")
 ### Polígono de frequências
+plot(hist_dados$mids, hist_dados$counts, col = "blue")
 
 ### Polígono de frequências com supérfulos
+plot(hist_dados$mids, hist_dados$counts, col = "blue", type = "l",
+     las = 1,
+     xlab = "Salários",
+     ylab = "Frequencia",
+     main = " ")
 
 
 ### Ogiva
