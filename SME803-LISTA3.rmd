@@ -26,12 +26,22 @@ library(readxl)
 tab <- read_excel(path = "SME0803_dados/2019-sme0803-lista2dadosK2.63.xls")
 freq <- tab$CCA/sum(tab$CCA)
 
-hist(tab$CCA,breaks = "Sturges", xlab = "CCA", main = " ")
+h <- hist(tab$CCA,breaks = "Sturges", xlab = "CCA", main = " ")
+
+x <- tab$CCA
+xfit<-seq(min(x),max(x),length=30)
+yfit<-dexp(xfit,rate = 1/mean(x))
+yfit <- yfit*diff(h$mids[1:2])*length(x)
+lines(xfit, yfit, col="blue")
+abline(v= median(tab$CCA), col = "red")
+legend("topright", col = c("red","blue"),
+       legend = c("Mediana","Modelo Exponencial"),
+       pch = "|")
 ```
 
 * (b) Descreva a forma da distribuição.
 
-lembra uma exponencial com media 150 
+lembra uma exponencial com media 150 (linha azul)
 
 * (c) Estime o meio da distribuição, um número M tal que 50% dos dados estão abaixo de M e 50% estão acima de M.
 ```{r}
