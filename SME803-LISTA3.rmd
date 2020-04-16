@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 # VISUALIZAÇÃO E EXPLORAÇÃO DE DADOS - LISTA 3
 
-Prof. Juliana Cobre]
+Prof. Juliana Cobre
 
 Todos os exercícios foram retirados de Stephen Kokoska - Introdução à Estatística - Uma Abordagem por Resolução de Problemas, exceto onde indicado.
 
@@ -21,6 +21,21 @@ Consumo de Combustível e Carros. A qualidade de bateria de um automóvel é, em
 
 * (a) Construa uma distribuição de frequência para resumir esses dados, e faça o histograma correspondente.
 
+````{r}
+library(readxl)
+tab <- read_excel(path = "SME0803_dados/2019-sme0803-lista2dadosK2.63.xls")
+freq <- tab$CCA/sum(tab$CCA)
+
+hist(tab$CCA,breaks = "Sturges", xlab = "CCA", main = " ")
+```
+
 * (b) Descreva a forma da distribuição.
 
+lembra uma exponencial com media 150 
+
 * (c) Estime o meio da distribuição, um número M tal que 50% dos dados estão abaixo de M e 50% estão acima de M.
+```{r}
+# a famosa mediana
+ median(tab$CCA)
+```
+

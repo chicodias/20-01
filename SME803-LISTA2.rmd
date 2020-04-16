@@ -121,15 +121,25 @@ tab <-  read_excel("SME0803_dados/2019-sme0803-lista2dadosK2.30.xls")
 na <- sum(tab$`Com cinto`)
 freqa <- tab$`Com cinto` / na
 names(freqa) <- tab$Hora
-barplot(freqa)
+
 
 nb <- sum(tab$`Sem cinto`)
 freqb <- tab$`Sem cinto` / nb
 names(freqb) <- tab$Hora
-barplot(freqb)
+
+par(mfrow =c(2,1))
+barplot(freqa, col = "lightblue", main = "Com cinto")
+
+barplot(freqb, col = "lightpink", main = "Sem cinto")
 ```
 #### Resp c:
-Os dados parecer ter distribuição normal, porém seria necessário um teste de aderência (tentar ks.test(dados.ex14_6,y="pnorm",mean=10,sd=5) ) para comprovar essa hipótese. As frequencias tem uma distribuição similar entre si, sendo a média dos acidentes com cinto durante a tarde, enquanto os acidentes sem cinto ocorrem em média durante a madrugada. 
+* Teste de aderencia para verificar se os dados tem distr. normal
+
+````{r}
+ks.test(freqa,y="pnorm",mean=mean(freqa),sd=sd(freqa))
+ks.test(freqb,y="pnorm",mean=mean(freqb),sd=sd(freqb))
+```
+Valores-p próximos de 1 não nos fornecem indicios para rejeitar h0, ou seja, não refutamos que os dados tenham distribuição normal. A média dos acidentes com cinto ocorre durante a tarde, enquanto os acidentes sem cinto ocorrem em média durante a madrugada, e com uma variãncia maior. 
 
 ## Exercício 6
 
@@ -143,9 +153,17 @@ nomes <- tab$Classificação
 tab <- matrix(c(tab$`Freq Homens`,tab$`Freq Mulheres`),ncol = 2, nrow = 5)
 rownames(tab) <- nomes
 colnames(tab) <- c("Freq. Homens", "Freq Mulheres")
-barplot(t(tab))
 
-barplot(t(tab), beside = TRUE)
+par(mfrow =c(2,1))
+
+barplot(t(tab),col = c("lightblue","lightpink"), main = "Conceito no curso")
+
+legend("topright", col = c("blue","pink"),
+       legend = c("Homens","Mulheres"),
+       pch = 1)
+
+barplot(t(tab), beside = TRUE, col = c("lightblue","lightpink"))
+
 
 ```
 
@@ -165,12 +183,12 @@ nomes <- tab$`Grupo de idade`
 tab <- matrix(c(tab$`Freq. Relativa Homens`,tab$`Freq. Relativa Mulheres`),ncol = 2, nrow = 7)
 rownames(tab) <- nomes
 colnames(tab) <- c("Freq. Relativa Homens", "Freq Relativa Mulheres")
-barplot(t(tab))
+barplot(t(tab),col = c("lightblue","lightpink"))
 
-barplot(t(tab), beside = TRUE)
-legend("topright",
+barplot(t(tab), beside = T, col = c("blue","pink"))
+legend("topright", col = c("lightblue","lightpink"),
        legend = c("Homens","Mulheres"),
-       pch = 15)
+       pch = 1)
 
 
 ```
