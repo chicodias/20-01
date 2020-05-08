@@ -171,10 +171,17 @@ freq = hist_dados$counts
 Freq = cumsum(freq)
 
 
+plot(fdt(dados$salario), type = "cfh", col = "white",
+     xlab = "Salário",
+     ylab = "Frequencia Acumulada")
+lines(hist_dados$breaks, c(0, Freq), col = "red")
+
 
 # Polígono de frequências tipo escada
 
-
+plot(hist_dados$breaks, c(0, Freq), type = "s",
+     xlab = "Salário",
+     ylab = "Frequencia Acumulada")
 
 ### Gráfico de pontos
 stripchart(dados$salario, pch = 20, method = "stack", 
@@ -185,12 +192,15 @@ stripchart(round(dados$salario), pch = 20,
            main = "Com arredondamento")
 
 ### Gráfico de linhas
-
+library(ggplot2)
 # dados economics
 names(economics)
 ?economics
 
-plot(economics$date, economics$psavert)
+plot(economics$date, economics$psavert, type = "l",
+     xlab = "Data",
+     ylab = "% poupada", col = "blue", main = "% do salario poupado / total ganho - EUA"
+     , las = 1)
 
 
 
@@ -198,4 +208,5 @@ plot(economics$date, economics$psavert)
 # dados gerados da massa corpórea (kg) de uma amostra de frequentadores da cantina
 massa = c(81.2, 89.5, 67.0, 77.2, 66.8, 65.1, 69.9, 92.6, 49.7, 74.7, 51.9, 77.9, 75.4, 60.8, 84.5, 87.5, 69.4, 69.2, 73.9, 60.0, 94.8, 57.7, 72.8, 86.4, 77.6, 98.1, 81.1, 80.9, 75.1, 88.0, 68.5, 70.1, 106.6, 89.5, 85.9, 67.2, 78.9, 59.2, 75.4, 90.2, 86.3, 68.8, 87.8, 67.0, 84.6, 88.8, 76.9, 80.7, 60.4, 100.5, 82.1, 80.1, 60.5, 73.2, 62.5, 77.7, 70.6, 79.8, 70.2, 76.3, 81.9, 80.4, 75.9, 87.6, 70.0, 75.8, 89.2, 77.1, 75.1, 83.2, 93.0, 95.2, 73.5, 65.0, 74.0, 73.2, 75.1, 78.5, 76.9, 69.6)
 
+stem(massa)
 

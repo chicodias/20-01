@@ -49,3 +49,25 @@ lembra uma exponencial com media 150 (linha azul)
  median(tab$CCA)
 ```
 
+
+## Exercicio 2
+
+arquivo 2019-sme0803-lista2dadosK2.65.xls.
+
+* Construa dois histogramas de frequência relativa, uma para os Estados Unidos e um para a Europa.
+
+* Descreva a forma de cada histograma. A comparação desses dois histogramas sugere quais quer diferenças na ingestão de niacina entre os dois grupos? Explique.
+
+
+```{r}
+library(tidyverse)
+
+ex2 <- read_excel(path = "SME0803_dados/2019-sme0803-lista2dadosK2.65.xls")
+prop.table()
+
+barplot(ex2$`Frequência Europa`, col = "blue")
+barplot(ex2$`Frequência EUA`, col = "red")#, add = T)
+
+nEu <- sum(ex2$`Frequência Europa`)
+```
+
