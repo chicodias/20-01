@@ -98,7 +98,7 @@ ab %>% pareto.chart(main = " ", las = 0,
 
 #filtrando os dados e calculando a frequencia relativa
 sec <- dt %>% select(Type) %>%
-      filter(Type == "Small" | Type == "Midsize" | Type == "Compact") %>%
+      filter(Type %in% c("Small","Midsize","Compact")) %>%
       count(Type, sort = T) %>%
       mutate(prop = n / sum(n), prop = scales::percent(prop))
 #plotando o grafico de setores
@@ -144,7 +144,7 @@ print(paste("Moda: ", moda(dt$Price), "Mediana: ", median(dt$Price), "Média: ",
 library(e1071)
 
 (af <- skewness(dt$Price, type = 1))
-#como af > 0, confirmamos que X possui assimetria positiva.
+#como af > 0, mais um indício de que X possui assimetria positiva.
 
 (k_m <- kurtosis(dt$Price, type = 1))
 

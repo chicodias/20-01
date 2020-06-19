@@ -127,7 +127,7 @@ tabela
 
 ### alternativa usando o pacote fdth
 
-install.packages("fdth")
+#install.packages("fdth")
 library(fdth)
 
 

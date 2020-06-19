@@ -1,0 +1,43 @@
+---
+  title: "SME0803-LISTA5"
+author: "Francisco Miranda"
+date: "12/03/2020"
+output: html_document
+---
+  
+  ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# VISUALIZAÇÃO E EXPLORAÇÃO DE DADOS - LISTA 5
+
+Prof. Juliana Cobre
+
+
+## Exercício 1
+
+Curva de Lorenz e Indice de Gini
+
+````{r}
+library(ineq)
+d1 <- c(0,2,4,6)
+cl <- Lc(d1)
+plot(cl)
+
+Gini(d1)
+1-1/length(d1)
+```
+
+
+## Exercicio 2
+Empresa de calcados
+
+````{r}
+library(tidyverse)
+f2 <- c(23,15,10,6,4,2)
+c2 <- c(2.5,7.5,15,35,75,125)
+
+fabs2 <- seq(2.5,2.5,23)
+
+
+fabs2 <- f2*c2
+```
