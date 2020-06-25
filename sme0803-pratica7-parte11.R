@@ -29,17 +29,22 @@ filled.contour(x = 1:nrow(volcano), y = 1:ncol(volcano),
 # gráfico de perspectiva: blue-red
 persp(volcano, phi = 40, theta = 60,
       col = heat.colors(ncol(volcano)*nrow(volcano), 0.8), 
-        ticktype = "detailed", xlab = "Sul - Norte")
+      ticktype = "detailed", xlab = "Sul - Norte",
+      ylab = "Leste - Oeste", zlab = "Altura(unidade)")
 
 # gráfico de perspectiva: virids
-persp()
+persp(volcano, phi = 40, theta = 60,
+      col = viridis(ncol(volcano)*nrow(volcano), 0.8), 
+      ticktype = "simple", xlab = "Sul - Norte",
+      ylab = "Leste - Oeste", zlab = "Altura(unidade)")
 
 # curvas de nível
-contour()
+contour(x = 1:nrow(volcano), y = 1:ncol(volcano), volcano,
+        col = "darkred", xlab = "Sul - Norte",  ylab = "Leste - Oeste")
 
 ### usando o pacote plotly
 library(plotly)
-plot_ly()
+plot_ly(z = ~volcano, type = "surface")
 
 ### o pacote plotly faz gráficos parecidos 
 # com os do ggplot2 #ficadica
@@ -62,13 +67,13 @@ df = read.csv('hotels.csv')
 #View(df)
 
 # importar o arquivo texto 
-text <-
+text <- df$Description[1:100]
 
 # processar os dados como um corpus
-docs <- 
+docs <- Corpus(VectorSource(text))
 
 # se quiser, dar uma olhada no arquivo
-
+inspect(docs)
 
 # trocar os caracteres especiais por espaço
 toSpace <- content_transformer(
@@ -78,19 +83,19 @@ docs <- tm_map(docs, toSpace, "@")
 docs <- tm_map(docs, toSpace, "\\|")
 
 # converter o texto para letras minúsculas
-docs <- tm_map(docs, )
+docs <- tm_map(docs, content_transformer(tolower))
 
 # remover pontuação
-docs <- tm_map(docs, )
+docs <- tm_map(docs, removePunctuation)
 
 # remover espaços em branco extras
-docs <- tm_map(docs, )
+docs <- tm_map(docs, stripWhitespace)
 
 # remover os números
-docs <- tm_map(docs, )
+docs <- tm_map(docs, removeNumbers)
 
 # olhar o texto filtrado
-
+inspect(docs)
 
 # construir a matriz do documento: tabela contendo
 # a frequência das palavras do texto
@@ -109,7 +114,7 @@ wordcloud(words = d$word, freq = d$freq, min.freq = 1,
 
 
 # remover palavras comuns (stopwords) em inglês
-docs <- tm_map(docs,)
+docs <- tm_map(docs, removeWords, stopwords("en"))
 
 # construir a matriz do documento
 dtm <- TermDocumentMatrix(docs)
@@ -120,10 +125,14 @@ head(d, 10)
 
 # apenas com esses "filtros", construir a segunda wordcloud.
 set.seed(803)
+wordcloud(words = d$word, freq = d$freq, min.freq = 1,
+          max.words=200, random.order=FALSE, rot.per=0.35, 
+          colors=brewer.pal(8, "Dark2"))
 
 
 # remover palavras que devem ser desconsideradas 
-docs <- tm_map(docs, ) 
+docs <- tm_map(docs, removeWords, c("will", "hotel", "room", "rooms",
+                                    "etc")) 
 
 # construir a matriz do documento
 dtm <- TermDocumentMatrix(docs)
@@ -134,32 +143,21 @@ head(d, 10)
 
 # apenas com esses "filtros", construir a terceira wordcloud.
 set.seed(803)
+wordcloud(words = d$word, freq = d$freq, min.freq = 1,
+          max.words=200, random.order=FALSE, rot.per=0.35, 
+          colors=brewer.pal(8, "Dark2"))
 
-# remover outras palavras que devem ser desconsideradas 
-docs <- tm_map(docs, ) 
-
-# construir a matriz do documento
-dtm <- TermDocumentMatrix(docs)
-m <- as.matrix(dtm)
-v <- sort(rowSums(m),decreasing=TRUE)
-d <- data.frame(word = names(v),freq=v)
-head(d, 10)
-
-# apenas com esses "filtros", construir a terceira wordcloud.
-set.seed(803)
-
-
-# encontrar as palavras que ocorrem pelo menos quatro vezes
-findFreqTerms(dtm, )
+# encontrar as palavras que ocorrem pelo menos trinta vezes
+findFreqTerms(dtm, lowfreq = 30)
 
 # encontrar quais as palavras do texto estão associadas com "best"
-findAssocs(dtm, )
+findAssocs(dtm, terms = "best", corlimit = 0.3)
 
 # dar uma olhada na tabela de frequência do texto
 head(d,10)
 
-# considerar apenas o núcleo morfológico das palavras (em português)
-docs <- tm_map(docs, )
+# considerar apenas o núcleo morfológico das palavras (em ingles)
+docs <- tm_map(docs, stemDocument, "en")
 
 # construir a matriz do documento
 dtm <- TermDocumentMatrix(docs)
@@ -170,14 +168,12 @@ head(d, 10)
 
 # apenas com esses "filtros", construir a quinta wordcloud.
 set.seed(803)
+wordcloud(words = d$word, freq = d$freq, min.freq = 1,
+          max.words=200, random.order=FALSE, rot.per=0.35, 
+          colors=brewer.pal(8, "Dark2"))
 
-# encontrar as palavras que ocorrem pelo menos quatro vezes
-findFreqTerms(dtm, )
-
-# encontrar quais as palavras do texto estão associadas com "curso"
-findAssocs(dtm, terms = "best", corlimit = 0.3)
-
-# dar uma olhada na tabela de frequência do texto
-head(d,10)
-
+#construir a wordcloud com 50 palavras
+wordcloud(words = d$word, freq = d$freq, min.freq = 1,
+          max.words=50, random.order=FALSE, rot.per=0.35, 
+          colors=brewer.pal(8, "Dark2"))
 

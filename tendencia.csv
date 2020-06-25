@@ -1,0 +1,885 @@
+Semana,Regiao,Casos
+1,Araçatuba,13
+1,Araraquara,5
+1,Baixada Santista,4
+1,Barretos,6
+1,Bauru,4
+1,Campinas,22
+1,Franca,3
+1,Marília,5
+1,Piracicaba,2
+1,Presidente Prudente,2
+1,Registro,0
+1,Riberão Preto,28
+1,São João da Boa Vista,3
+1,São José do Rio Preto,16
+1,São Paulo,21
+1,Sorocaba,3
+1,Taubaté,8
+2,Araçatuba,3
+2,Araraquara,10
+2,Baixada Santista,7
+2,Barretos,3
+2,Bauru,8
+2,Campinas,28
+2,Franca,2
+2,Marília,3
+2,Piracicaba,6
+2,Presidente Prudente,3
+2,Registro,1
+2,Riberão Preto,36
+2,São João da Boa Vista,3
+2,São José do Rio Preto,18
+2,São Paulo,28
+2,Sorocaba,2
+2,Taubaté,11
+3,Araçatuba,3
+3,Araraquara,17
+3,Baixada Santista,11
+3,Barretos,3
+3,Bauru,2
+3,Campinas,37
+3,Franca,1
+3,Marília,4
+3,Piracicaba,3
+3,Presidente Prudente,3
+3,Registro,1
+3,Riberão Preto,30
+3,São João da Boa Vista,10
+3,São José do Rio Preto,16
+3,São Paulo,31
+3,Sorocaba,4
+3,Taubaté,12
+4,Araçatuba,6
+4,Araraquara,9
+4,Baixada Santista,2
+4,Barretos,4
+4,Bauru,9
+4,Campinas,37
+4,Franca,1
+4,Marília,7
+4,Piracicaba,3
+4,Presidente Prudente,3
+4,Registro,0
+4,Riberão Preto,46
+4,São João da Boa Vista,3
+4,São José do Rio Preto,29
+4,São Paulo,27
+4,Sorocaba,1
+4,Taubaté,12
+5,Araçatuba,5
+5,Araraquara,8
+5,Baixada Santista,3
+5,Barretos,6
+5,Bauru,5
+5,Campinas,65
+5,Franca,3
+5,Marília,6
+5,Piracicaba,3
+5,Presidente Prudente,3
+5,Registro,0
+5,Riberão Preto,41
+5,São João da Boa Vista,2
+5,São José do Rio Preto,32
+5,São Paulo,28
+5,Sorocaba,3
+5,Taubaté,23
+6,Araçatuba,4
+6,Araraquara,5
+6,Baixada Santista,8
+6,Barretos,2
+6,Bauru,5
+6,Campinas,54
+6,Franca,3
+6,Marília,11
+6,Piracicaba,4
+6,Presidente Prudente,3
+6,Registro,0
+6,Riberão Preto,40
+6,São João da Boa Vista,1
+6,São José do Rio Preto,16
+6,São Paulo,26
+6,Sorocaba,3
+6,Taubaté,15
+7,Araçatuba,9
+7,Araraquara,7
+7,Baixada Santista,3
+7,Barretos,1
+7,Bauru,5
+7,Campinas,76
+7,Franca,0
+7,Marília,15
+7,Piracicaba,1
+7,Presidente Prudente,0
+7,Registro,0
+7,Riberão Preto,48
+7,São João da Boa Vista,4
+7,São José do Rio Preto,19
+7,São Paulo,29
+7,Sorocaba,4
+7,Taubaté,15
+8,Araçatuba,3
+8,Araraquara,12
+8,Baixada Santista,5
+8,Barretos,1
+8,Bauru,3
+8,Campinas,91
+8,Franca,0
+8,Marília,17
+8,Piracicaba,10
+8,Presidente Prudente,3
+8,Registro,0
+8,Riberão Preto,48
+8,São João da Boa Vista,3
+8,São José do Rio Preto,25
+8,São Paulo,18
+8,Sorocaba,2
+8,Taubaté,11
+9,Araçatuba,3
+9,Araraquara,9
+9,Baixada Santista,3
+9,Barretos,4
+9,Bauru,3
+9,Campinas,112
+9,Franca,3
+9,Marília,18
+9,Piracicaba,5
+9,Presidente Prudente,3
+9,Registro,1
+9,Riberão Preto,44
+9,São João da Boa Vista,4
+9,São José do Rio Preto,23
+9,São Paulo,20
+9,Sorocaba,5
+9,Taubaté,24
+10,Araçatuba,2
+10,Araraquara,19
+10,Baixada Santista,3
+10,Barretos,2
+10,Bauru,2
+10,Campinas,138
+10,Franca,6
+10,Marília,4
+10,Piracicaba,11
+10,Presidente Prudente,2
+10,Registro,0
+10,Riberão Preto,62
+10,São João da Boa Vista,4
+10,São José do Rio Preto,32
+10,São Paulo,24
+10,Sorocaba,12
+10,Taubaté,22
+11,Araçatuba,5
+11,Araraquara,18
+11,Baixada Santista,6
+11,Barretos,13
+11,Bauru,6
+11,Campinas,138
+11,Franca,4
+11,Marília,16
+11,Piracicaba,8
+11,Presidente Prudente,1
+11,Registro,0
+11,Riberão Preto,66
+11,São João da Boa Vista,5
+11,São José do Rio Preto,46
+11,São Paulo,16
+11,Sorocaba,15
+11,Taubaté,13
+12,Araçatuba,2
+12,Araraquara,21
+12,Baixada Santista,4
+12,Barretos,14
+12,Bauru,5
+12,Campinas,105
+12,Franca,5
+12,Marília,12
+12,Piracicaba,8
+12,Presidente Prudente,1
+12,Registro,0
+12,Riberão Preto,57
+12,São João da Boa Vista,4
+12,São José do Rio Preto,71
+12,São Paulo,18
+12,Sorocaba,14
+12,Taubaté,23
+13,Araçatuba,2
+13,Araraquara,36
+13,Baixada Santista,5
+13,Barretos,24
+13,Bauru,3
+13,Campinas,71
+13,Franca,4
+13,Marília,19
+13,Piracicaba,13
+13,Presidente Prudente,1
+13,Registro,1
+13,Riberão Preto,33
+13,São João da Boa Vista,5
+13,São José do Rio Preto,61
+13,São Paulo,28
+13,Sorocaba,34
+13,Taubaté,14
+14,Araçatuba,3
+14,Araraquara,70
+14,Baixada Santista,4
+14,Barretos,25
+14,Bauru,1
+14,Campinas,113
+14,Franca,13
+14,Marília,13
+14,Piracicaba,29
+14,Presidente Prudente,1
+14,Registro,0
+14,Riberão Preto,31
+14,São João da Boa Vista,6
+14,São José do Rio Preto,66
+14,São Paulo,26
+14,Sorocaba,55
+14,Taubaté,19
+15,Araçatuba,8
+15,Araraquara,58
+15,Baixada Santista,0
+15,Barretos,21
+15,Bauru,2
+15,Campinas,95
+15,Franca,27
+15,Marília,12
+15,Piracicaba,21
+15,Presidente Prudente,4
+15,Registro,0
+15,Riberão Preto,39
+15,São João da Boa Vista,6
+15,São José do Rio Preto,74
+15,São Paulo,21
+15,Sorocaba,60
+15,Taubaté,17
+16,Araçatuba,3
+16,Araraquara,71
+16,Baixada Santista,1
+16,Barretos,35
+16,Bauru,1
+16,Campinas,83
+16,Franca,30
+16,Marília,7
+16,Piracicaba,15
+16,Presidente Prudente,4
+16,Registro,0
+16,Riberão Preto,41
+16,São João da Boa Vista,7
+16,São José do Rio Preto,102
+16,São Paulo,25
+16,Sorocaba,59
+16,Taubaté,12
+17,Araçatuba,8
+17,Araraquara,66
+17,Baixada Santista,2
+17,Barretos,13
+17,Bauru,1
+17,Campinas,74
+17,Franca,17
+17,Marília,10
+17,Piracicaba,16
+17,Presidente Prudente,4
+17,Registro,0
+17,Riberão Preto,26
+17,São João da Boa Vista,4
+17,São José do Rio Preto,100
+17,São Paulo,23
+17,Sorocaba,37
+17,Taubaté,9
+18,Araçatuba,17
+18,Araraquara,73
+18,Baixada Santista,3
+18,Barretos,15
+18,Bauru,3
+18,Campinas,62
+18,Franca,16
+18,Marília,11
+18,Piracicaba,20
+18,Presidente Prudente,3
+18,Registro,0
+18,Riberão Preto,24
+18,São João da Boa Vista,4
+18,São José do Rio Preto,142
+18,São Paulo,33
+18,Sorocaba,55
+18,Taubaté,16
+19,Araçatuba,20
+19,Araraquara,88
+19,Baixada Santista,5
+19,Barretos,17
+19,Bauru,5
+19,Campinas,62
+19,Franca,25
+19,Marília,8
+19,Piracicaba,22
+19,Presidente Prudente,2
+19,Registro,0
+19,Riberão Preto,23
+19,São João da Boa Vista,8
+19,São José do Rio Preto,149
+19,São Paulo,16
+19,Sorocaba,30
+19,Taubaté,8
+20,Araçatuba,22
+20,Araraquara,57
+20,Baixada Santista,1
+20,Barretos,11
+20,Bauru,0
+20,Campinas,45
+20,Franca,17
+20,Marília,3
+20,Piracicaba,13
+20,Presidente Prudente,2
+20,Registro,0
+20,Riberão Preto,21
+20,São João da Boa Vista,6
+20,São José do Rio Preto,148
+20,São Paulo,25
+20,Sorocaba,16
+20,Taubaté,11
+21,Araçatuba,7
+21,Araraquara,65
+21,Baixada Santista,2
+21,Barretos,11
+21,Bauru,2
+21,Campinas,27
+21,Franca,9
+21,Marília,4
+21,Piracicaba,22
+21,Presidente Prudente,1
+21,Registro,0
+21,Riberão Preto,12
+21,São João da Boa Vista,6
+21,São José do Rio Preto,111
+21,São Paulo,12
+21,Sorocaba,35
+21,Taubaté,4
+22,Araçatuba,18
+22,Araraquara,42
+22,Baixada Santista,2
+22,Barretos,11
+22,Bauru,1
+22,Campinas,20
+22,Franca,6
+22,Marília,6
+22,Piracicaba,9
+22,Presidente Prudente,2
+22,Registro,0
+22,Riberão Preto,10
+22,São João da Boa Vista,4
+22,São José do Rio Preto,63
+22,São Paulo,9
+22,Sorocaba,15
+22,Taubaté,4
+23,Araçatuba,5
+23,Araraquara,43
+23,Baixada Santista,2
+23,Barretos,4
+23,Bauru,3
+23,Campinas,14
+23,Franca,9
+23,Marília,3
+23,Piracicaba,5
+23,Presidente Prudente,1
+23,Registro,0
+23,Riberão Preto,12
+23,São João da Boa Vista,6
+23,São José do Rio Preto,93
+23,São Paulo,9
+23,Sorocaba,11
+23,Taubaté,7
+24,Araçatuba,5
+24,Araraquara,28
+24,Baixada Santista,4
+24,Barretos,7
+24,Bauru,5
+24,Campinas,20
+24,Franca,11
+24,Marília,7
+24,Piracicaba,3
+24,Presidente Prudente,3
+24,Registro,0
+24,Riberão Preto,13
+24,São João da Boa Vista,3
+24,São José do Rio Preto,74
+24,São Paulo,13
+24,Sorocaba,5
+24,Taubaté,5
+25,Araçatuba,9
+25,Araraquara,28
+25,Baixada Santista,3
+25,Barretos,7
+25,Bauru,2
+25,Campinas,15
+25,Franca,17
+25,Marília,2
+25,Piracicaba,6
+25,Presidente Prudente,0
+25,Registro,0
+25,Riberão Preto,9
+25,São João da Boa Vista,2
+25,São José do Rio Preto,54
+25,São Paulo,5
+25,Sorocaba,8
+25,Taubaté,3
+26,Araçatuba,8
+26,Araraquara,21
+26,Baixada Santista,3
+26,Barretos,5
+26,Bauru,3
+26,Campinas,17
+26,Franca,6
+26,Marília,2
+26,Piracicaba,3
+26,Presidente Prudente,1
+26,Registro,0
+26,Riberão Preto,3
+26,São João da Boa Vista,5
+26,São José do Rio Preto,43
+26,São Paulo,13
+26,Sorocaba,1
+26,Taubaté,2
+27,Araçatuba,8
+27,Araraquara,25
+27,Baixada Santista,7
+27,Barretos,5
+27,Bauru,5
+27,Campinas,12
+27,Franca,2
+27,Marília,1
+27,Piracicaba,2
+27,Presidente Prudente,0
+27,Registro,0
+27,Riberão Preto,2
+27,São João da Boa Vista,2
+27,São José do Rio Preto,47
+27,São Paulo,11
+27,Sorocaba,3
+27,Taubaté,6
+28,Araçatuba,8
+28,Araraquara,22
+28,Baixada Santista,1
+28,Barretos,6
+28,Bauru,0
+28,Campinas,6
+28,Franca,2
+28,Marília,2
+28,Piracicaba,2
+28,Presidente Prudente,1
+28,Registro,0
+28,Riberão Preto,2
+28,São João da Boa Vista,1
+28,São José do Rio Preto,48
+28,São Paulo,9
+28,Sorocaba,2
+28,Taubaté,2
+29,Araçatuba,9
+29,Araraquara,14
+29,Baixada Santista,1
+29,Barretos,2
+29,Bauru,0
+29,Campinas,7
+29,Franca,2
+29,Marília,4
+29,Piracicaba,1
+29,Presidente Prudente,0
+29,Registro,0
+29,Riberão Preto,2
+29,São João da Boa Vista,1
+29,São José do Rio Preto,47
+29,São Paulo,22
+29,Sorocaba,3
+29,Taubaté,7
+30,Araçatuba,9
+30,Araraquara,10
+30,Baixada Santista,1
+30,Barretos,6
+30,Bauru,2
+30,Campinas,2
+30,Franca,8
+30,Marília,2
+30,Piracicaba,2
+30,Presidente Prudente,1
+30,Registro,0
+30,Riberão Preto,2
+30,São João da Boa Vista,2
+30,São José do Rio Preto,44
+30,São Paulo,9
+30,Sorocaba,0
+30,Taubaté,11
+31,Araçatuba,16
+31,Araraquara,14
+31,Baixada Santista,2
+31,Barretos,11
+31,Bauru,1
+31,Campinas,9
+31,Franca,5
+31,Marília,3
+31,Piracicaba,0
+31,Presidente Prudente,0
+31,Registro,0
+31,Riberão Preto,3
+31,São João da Boa Vista,4
+31,São José do Rio Preto,48
+31,São Paulo,3
+31,Sorocaba,1
+31,Taubaté,2
+32,Araçatuba,3
+32,Araraquara,12
+32,Baixada Santista,2
+32,Barretos,1
+32,Bauru,1
+32,Campinas,9
+32,Franca,3
+32,Marília,3
+32,Piracicaba,2
+32,Presidente Prudente,0
+32,Registro,1
+32,Riberão Preto,6
+32,São João da Boa Vista,2
+32,São José do Rio Preto,33
+32,São Paulo,3
+32,Sorocaba,0
+32,Taubaté,2
+33,Araçatuba,4
+33,Araraquara,4
+33,Baixada Santista,1
+33,Barretos,3
+33,Bauru,0
+33,Campinas,7
+33,Franca,1
+33,Marília,4
+33,Piracicaba,2
+33,Presidente Prudente,0
+33,Registro,1
+33,Riberão Preto,1
+33,São João da Boa Vista,0
+33,São José do Rio Preto,28
+33,São Paulo,6
+33,Sorocaba,0
+33,Taubaté,1
+34,Araçatuba,14
+34,Araraquara,5
+34,Baixada Santista,3
+34,Barretos,2
+34,Bauru,2
+34,Campinas,9
+34,Franca,1
+34,Marília,5
+34,Piracicaba,3
+34,Presidente Prudente,2
+34,Registro,0
+34,Riberão Preto,1
+34,São João da Boa Vista,0
+34,São José do Rio Preto,35
+34,São Paulo,5
+34,Sorocaba,1
+34,Taubaté,4
+35,Araçatuba,15
+35,Araraquara,3
+35,Baixada Santista,0
+35,Barretos,1
+35,Bauru,0
+35,Campinas,2
+35,Franca,1
+35,Marília,1
+35,Piracicaba,1
+35,Presidente Prudente,1
+35,Registro,0
+35,Riberão Preto,0
+35,São João da Boa Vista,2
+35,São José do Rio Preto,23
+35,São Paulo,4
+35,Sorocaba,3
+35,Taubaté,2
+36,Araçatuba,17
+36,Araraquara,5
+36,Baixada Santista,0
+36,Barretos,0
+36,Bauru,0
+36,Campinas,7
+36,Franca,1
+36,Marília,0
+36,Piracicaba,0
+36,Presidente Prudente,0
+36,Registro,0
+36,Riberão Preto,0
+36,São João da Boa Vista,0
+36,São José do Rio Preto,7
+36,São Paulo,5
+36,Sorocaba,0
+36,Taubaté,5
+37,Araçatuba,16
+37,Araraquara,10
+37,Baixada Santista,2
+37,Barretos,1
+37,Bauru,0
+37,Campinas,7
+37,Franca,1
+37,Marília,0
+37,Piracicaba,1
+37,Presidente Prudente,1
+37,Registro,0
+37,Riberão Preto,1
+37,São João da Boa Vista,0
+37,São José do Rio Preto,10
+37,São Paulo,7
+37,Sorocaba,0
+37,Taubaté,2
+38,Araçatuba,16
+38,Araraquara,10
+38,Baixada Santista,1
+38,Barretos,0
+38,Bauru,3
+38,Campinas,6
+38,Franca,0
+38,Marília,1
+38,Piracicaba,1
+38,Presidente Prudente,3
+38,Registro,1
+38,Riberão Preto,0
+38,São João da Boa Vista,1
+38,São José do Rio Preto,23
+38,São Paulo,6
+38,Sorocaba,0
+38,Taubaté,2
+39,Araçatuba,19
+39,Araraquara,9
+39,Baixada Santista,2
+39,Barretos,1
+39,Bauru,1
+39,Campinas,8
+39,Franca,3
+39,Marília,1
+39,Piracicaba,1
+39,Presidente Prudente,7
+39,Registro,0
+39,Riberão Preto,0
+39,São João da Boa Vista,0
+39,São José do Rio Preto,18
+39,São Paulo,5
+39,Sorocaba,1
+39,Taubaté,1
+40,Araçatuba,20
+40,Araraquara,11
+40,Baixada Santista,1
+40,Barretos,0
+40,Bauru,3
+40,Campinas,5
+40,Franca,2
+40,Marília,0
+40,Piracicaba,1
+40,Presidente Prudente,6
+40,Registro,0
+40,Riberão Preto,1
+40,São João da Boa Vista,2
+40,São José do Rio Preto,26
+40,São Paulo,6
+40,Sorocaba,1
+40,Taubaté,2
+41,Araçatuba,24
+41,Araraquara,12
+41,Baixada Santista,1
+41,Barretos,1
+41,Bauru,0
+41,Campinas,5
+41,Franca,3
+41,Marília,1
+41,Piracicaba,2
+41,Presidente Prudente,11
+41,Registro,0
+41,Riberão Preto,1
+41,São João da Boa Vista,0
+41,São José do Rio Preto,13
+41,São Paulo,5
+41,Sorocaba,1
+41,Taubaté,2
+42,Araçatuba,33
+42,Araraquara,13
+42,Baixada Santista,1
+42,Barretos,0
+42,Bauru,3
+42,Campinas,9
+42,Franca,3
+42,Marília,1
+42,Piracicaba,0
+42,Presidente Prudente,9
+42,Registro,0
+42,Riberão Preto,4
+42,São João da Boa Vista,0
+42,São José do Rio Preto,32
+42,São Paulo,6
+42,Sorocaba,0
+42,Taubaté,2
+43,Araçatuba,44
+43,Araraquara,14
+43,Baixada Santista,1
+43,Barretos,0
+43,Bauru,5
+43,Campinas,4
+43,Franca,9
+43,Marília,1
+43,Piracicaba,0
+43,Presidente Prudente,2
+43,Registro,0
+43,Riberão Preto,0
+43,São João da Boa Vista,0
+43,São José do Rio Preto,37
+43,São Paulo,8
+43,Sorocaba,0
+43,Taubaté,7
+44,Araçatuba,64
+44,Araraquara,20
+44,Baixada Santista,2
+44,Barretos,0
+44,Bauru,11
+44,Campinas,10
+44,Franca,8
+44,Marília,0
+44,Piracicaba,1
+44,Presidente Prudente,2
+44,Registro,0
+44,Riberão Preto,1
+44,São João da Boa Vista,1
+44,São José do Rio Preto,54
+44,São Paulo,8
+44,Sorocaba,4
+44,Taubaté,3
+45,Araçatuba,86
+45,Araraquara,20
+45,Baixada Santista,1
+45,Barretos,1
+45,Bauru,12
+45,Campinas,7
+45,Franca,11
+45,Marília,2
+45,Piracicaba,0
+45,Presidente Prudente,1
+45,Registro,0
+45,Riberão Preto,2
+45,São João da Boa Vista,0
+45,São José do Rio Preto,55
+45,São Paulo,9
+45,Sorocaba,1
+45,Taubaté,3
+46,Araçatuba,85
+46,Araraquara,19
+46,Baixada Santista,4
+46,Barretos,0
+46,Bauru,5
+46,Campinas,9
+46,Franca,15
+46,Marília,0
+46,Piracicaba,2
+46,Presidente Prudente,3
+46,Registro,0
+46,Riberão Preto,2
+46,São João da Boa Vista,0
+46,São José do Rio Preto,92
+46,São Paulo,6
+46,Sorocaba,1
+46,Taubaté,1
+47,Araçatuba,142
+47,Araraquara,28
+47,Baixada Santista,0
+47,Barretos,7
+47,Bauru,16
+47,Campinas,7
+47,Franca,26
+47,Marília,1
+47,Piracicaba,1
+47,Presidente Prudente,2
+47,Registro,0
+47,Riberão Preto,1
+47,São João da Boa Vista,0
+47,São José do Rio Preto,107
+47,São Paulo,7
+47,Sorocaba,0
+47,Taubaté,2
+48,Araçatuba,170
+48,Araraquara,36
+48,Baixada Santista,0
+48,Barretos,10
+48,Bauru,15
+48,Campinas,5
+48,Franca,28
+48,Marília,1
+48,Piracicaba,1
+48,Presidente Prudente,3
+48,Registro,0
+48,Riberão Preto,1
+48,São João da Boa Vista,2
+48,São José do Rio Preto,116
+48,São Paulo,7
+48,Sorocaba,2
+48,Taubaté,3
+49,Araçatuba,204
+49,Araraquara,63
+49,Baixada Santista,1
+49,Barretos,12
+49,Bauru,15
+49,Campinas,1
+49,Franca,60
+49,Marília,2
+49,Piracicaba,0
+49,Presidente Prudente,5
+49,Registro,0
+49,Riberão Preto,5
+49,São João da Boa Vista,0
+49,São José do Rio Preto,100
+49,São Paulo,10
+49,Sorocaba,2
+49,Taubaté,4
+50,Araçatuba,401
+50,Araraquara,68
+50,Baixada Santista,1
+50,Barretos,25
+50,Bauru,26
+50,Campinas,8
+50,Franca,66
+50,Marília,0
+50,Piracicaba,0
+50,Presidente Prudente,12
+50,Registro,0
+50,Riberão Preto,5
+50,São João da Boa Vista,1
+50,São José do Rio Preto,165
+50,São Paulo,9
+50,Sorocaba,6
+50,Taubaté,5
+51,Araçatuba,299
+51,Araraquara,92
+51,Baixada Santista,0
+51,Barretos,15
+51,Bauru,52
+51,Campinas,5
+51,Franca,68
+51,Marília,0
+51,Piracicaba,1
+51,Presidente Prudente,24
+51,Registro,0
+51,Riberão Preto,15
+51,São João da Boa Vista,0
+51,São José do Rio Preto,148
+51,São Paulo,4
+51,Sorocaba,3
+51,Taubaté,3
+52,Araçatuba,384
+52,Araraquara,150
+52,Baixada Santista,1
+52,Barretos,21
+52,Bauru,116
+52,Campinas,10
+52,Franca,107
+52,Marília,3
+52,Piracicaba,0
+52,Presidente Prudente,21
+52,Registro,0
+52,Riberão Preto,18
+52,São João da Boa Vista,0
+52,São José do Rio Preto,197
+52,São Paulo,7
+52,Sorocaba,3
+52,Taubaté,5
