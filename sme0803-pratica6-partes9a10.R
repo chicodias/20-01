@@ -212,11 +212,11 @@ library(ineq)
 
 
 # apontando os "níves" da variável "urbanity"
- = c("Rural", "Urbana")
+# = c("Rural", "Urbana")
 
 # construção da tabela com a v. "province" separada 
 # nos níveis de "urbanity"
-tab1 = 
+#tab1 = 
 
 # marginais com relação a x
 
@@ -237,15 +237,15 @@ tab1 =
 
 
 # tabela de proporções com relação à marginal x
-tab1rel = 
+#tab1rel = 
 
 # marginais com relação a y
-addmargins(tab1rel, )
+#addmargins(tab1rel, )
 
 # marginais com relação a y em porcentagem com três dígitos
 
 # tabela de tab1rel
-tab1relp = 
+#tab1relp = 
 
 # gráfico de barras
 
@@ -265,25 +265,25 @@ tab1relp =
 # "province" e "sex" em porcentagem
 
 # marginais
-tab2marg =
+#tab2marg =
 
 # auxiliares
-k = 
-m = 
+#k = 
+#m = 
 
 # soma total
-n = 
+#n = 
 
 # multiplicação das frequências (supondo independência 
 # entre province e sex)
-tab2ind = 
+#tab2ind = 
 
 # nomeando linhas e colunas
 
 # gráfico mosaico
 
 # estatística de teste: qui quadrado de Pearson
-X2 = 
+#X2 = 
 
 # diversos gráficos de caixa
 
@@ -293,13 +293,13 @@ X2 =
 
 # gráfico de médias e desvios padrões do tamanho 
 # da família por província
-limy = c(0, 1.1 * max(tabmed + sqrt(tabvar)))
-gbarras = barplot(tabmed, xlab = "Província", 
-                  ylab = "Tamanho médio da família", 
-                  ylim = limy, col = "black", density = 10)
-arrows(gbarras, tabmed, gbarras, tabmed + sqrt(tabvar), 
-       angle = 90) 
-box()
+#limy = c(0, 1.1 * max(tabmed + sqrt(tabvar)))
+#gbarras = barplot(tabmed, xlab = "Província", 
+#                  ylab = "Tamanho médio da família", 
+#                  ylim = limy, col = "black", density = 10)
+#arrows(gbarras, tabmed, gbarras, tabmed + sqrt(tabvar), 
+#       angle = 90) 
+#box()
 
 
 

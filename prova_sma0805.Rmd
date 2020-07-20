@@ -1,0 +1,35 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# SMA0805 - Tópicos de Matemática
+
+ Francisco Rosa Dias de Miranda - 4402962
+
+##  Segunda Avaliação - Parte 2
+
+Em uma festa de fim de ano, foram $n$ pessoas. Nessa festa, cada pessoa abraçou cada uma das
+outras pessoas exatamente uma vez. No total houve 2080 abraços nessa festa. Determine o valor de $n$, e justifique sua resposta.
+
+### Resolução
+
+Vamos fixar a ordem das pessoas na festa para evitar de contar em duplicidade.
+
+A pessoa (1) da festa abraçou $n-1$ pessoas, de acordo com o enunciado. A pessoa (2) já teve seu abraço em (1) computado, então temos que (2) deu outros $n-2$ abraços. Já a pessoa (3) abraçou $n-3$ novas vezes, e assim por diante. 
+
+Quando chegamos ao $(n-1)$-ésimo convidado, só resta a ele abraçar a pessoa na posicão (n), que, assim, tem todos seus abraços contabilizados. Portanto, podemos determinar o total de abracos em função de $n$ da seguinte forma:
+
+Total de abraços $= \sum_{i=1}^n (n - i)$. (Prova: por indução, que aqui omitiremos).
+
+Logo, segue que:
+
+$$ 2080 = (n-1) + (n-2) + ... + 1 + 0$$
+Utilizando a fórmula de soma dos $n$ termos de uma P.A. de razão 1, temos:
+$$ 2080 = \frac {n(0 + n-1)}{2}  \Leftrightarrow n^2 - n = 4160 \Leftrightarrow \begin{cases}
+n = -64\\
+n = 65
+\end{cases}$$
+Desconsideramos a solução negativa, pois procuramos o número de pessoas na festa. Portanto, 
+$n = 65$.
